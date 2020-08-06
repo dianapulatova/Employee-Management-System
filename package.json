@@ -1,0 +1,25 @@
+{
+  "name": "employee-management-system",
+  "version": "1.0.0",
+  "description": "Employee Tracker",
+  "main": "app.js",
+  "scripts": {
+    
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianapulatova/Employee-Management-System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dianapulatova/Employee-Management-System/issues"
+  },
+  "homepage": "https://github.com/dianapulatova/Employee-Management-System#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.2.2",
+    "mysql": "^2.18.1"
+  }
+}
