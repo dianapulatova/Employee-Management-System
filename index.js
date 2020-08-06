@@ -28,8 +28,8 @@ function start(){
       message: "What would you like to do?",
       name: "start",
       choices: [
-      "Add Employee", 
       "View all Employees", 
+      "Add Employee", 
       "Remove Employee",
       "Add Department", 
       "View all Departments",
