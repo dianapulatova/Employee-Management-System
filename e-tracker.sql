@@ -21,14 +21,14 @@ PRIMARY KEY(id)
 
 
 CREATE TABLE employee(
-id integer auto_increment not null,
-first_name varchar(30) not null,
-last_name varchar(30) not null,
-role_id integer not null,
-constraint fk_role_id FOREIGN KEY (role_id) REFERENCES role(id),
-manager_id integer ,
-constraint fk_manager_id FOREIGN KEY (manager_id) REFERENCES employee(id),
-Primary key(id)
+id INT AUTO_INCREMENT NOT NULL,
+first_name VARCHAR(30) NOT NULL,
+last_name VARCHAR(30) NOT NULL,
+role_id INTEGER NOT NULL,
+CONSTRAINT fk_role_id FOREIGN KEY (role_id) REFERENCES role(id),
+manager_id INTEGER ,
+CONSTRAINT fk_manager_id FOREIGN KEY (manager_id) REFERENCES employee(id),
+PRIMARY KEY(id)
 );
 
 select * from employee;
