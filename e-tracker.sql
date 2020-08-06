@@ -31,11 +31,11 @@ CONSTRAINT fk_manager_id FOREIGN KEY (manager_id) REFERENCES employee(id),
 PRIMARY KEY(id)
 );
 
-select * from employee;
-select * from role;
+SELECT * FROM employee;
+SELECT * FROM role;
 
 
-INSERT into department (name)
+INSERT INTO department (name)
 VALUES ("Sales"), ("Engineering"), ("Finance"), ("Legal"), ("Manager");
 
 
