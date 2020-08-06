@@ -39,5 +39,5 @@ INSERT into department (name)
 VALUES ("Sales"), ("Engineering"), ("Finance"), ("Legal"), ("Manager");
 
 
-select * FROM department;
+SELECT * FROM department;
 
