@@ -11,12 +11,12 @@ PRIMARY KEY(id)
 );
 
 CREATE TABLE role(
-id integer auto_increment not null,
-title varchar(30) not null,
-salary decimal not null,
-department_id Integer not null,
-constraint fk_department_id foreign key (department_id) references department(id),
-primary key(id)
+id INT AUTO_INCREMENT NOT NULL,
+title VARCHAR(30) NOT NULL,
+salary DECIMAL NOT NULL,
+department_id INTEGER NOT NULL,
+CONSTRAINT fk_department_id FOREIGN KEY (department_id) REFERENCES department(id),
+PRIMARY KEY(id)
 );
 
 
