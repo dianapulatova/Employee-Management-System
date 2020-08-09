@@ -35,6 +35,7 @@ function mainMenu() {
         "Add role",
         "Add department",
         "Update employee role",
+        "Quit"
       ],
     })
     .then((userAnswer) => {
@@ -72,7 +73,7 @@ function mainMenu() {
           updateEmpRole();
           break;
 
-        default:
+        case "Quit":
           connection.end();
       }
     });
