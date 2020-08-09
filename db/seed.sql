@@ -9,6 +9,4 @@ VALUES ('Han', 'Solo', 1, null), ('Leia','Skywalker', 2, null), ('Luke', 'Skywal
 
 SELECT * FROM department;
 SELECT * FROM roles;
-SELECT * FROM employee
-INNER JOIN roles
-ON roles.id = employee.roles_id;
+SELECT * FROM employee INNER JOIN roles ON roles.id = employee.roles_id;
