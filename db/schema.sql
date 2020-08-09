@@ -1,36 +1,33 @@
-DROP DATABASE IF EXISTS employee_tracker;
+DROP DATABASE IF EXISTS employee_DB;
 
-CREATE DATABASE employee_tracker;
+CREATE DATABASE employee_DB;
 
-USE employee_tracker;
+USE employee_DB;
 
 
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(35) UNIQUE NOT NULL,
+  name VARCHAR(45) UNIQUE NOT NULL,
   PRIMARY KEY (id)
 );
 
-CREATE TABLE role (
+CREATE TABLE roles (
   id INT UNIQUE NOT NULL AUTO_INCREMENT,
-  title VARCHAR(35) NULL,
+  title VARCHAR(45) NULL,
   salary DECIMAL(10,2) NULL,
   department_id INT NOT NULL,
-  FOREIGN KEY (department_id) REFERENCES department(id),
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
  CREATE TABLE employee (
   id INT UNIQUE NOT NULL AUTO_INCREMENT,
-  first_name VARCHAR(35) NULL,
-  last_name VARCHAR(35) NULL,
-  role_id INT NOT NULL,
+  first_name VARCHAR(45) NULL,
+  last_name VARCHAR(45) NULL,
+  roles_id INT NOT NULL,
   manager_id INT NULL,
-  FOREIGN KEY(role_id) REFERENCES role(id),
-  FOREIGN KEY (manager_id) REFERENCES employee(id),
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  FOREIGN KEY(roles_id) REFERENCES roles(id),
+  FOREIGN KEY (manager_id) REFERENCES employee(id)
 );
  
-SELECT * FROM department;
-SELECT * FROM role;
-SELECT * FROM employee;
