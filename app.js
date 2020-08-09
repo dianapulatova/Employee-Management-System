@@ -3,6 +3,7 @@ const mysql = require("mysql");
 const inquirer = require("inquirer");
 const conTable = require("console.table");
 
+
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -17,7 +18,7 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
   if (err) throw err;
-  console.log("\n WELCOME TO THE EMPLOYEE TRACKER! \n");
+  console.log("\n EMPLOYEE TRACKER! \n");
   mainMenu();
 });
 
